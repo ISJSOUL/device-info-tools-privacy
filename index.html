@@ -1,0 +1,451 @@
+<title>Device Info &amp; Tools Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<style>
+  /* Palette carries the app's own tokens across to the web, so the policy
+     reads as part of the product rather than a detached legal page. */
+  :root {
+    --ground: #FBFBFD;
+    --surface: #FFFFFF;
+    --panel: #F4F6FB;
+    --ink: #14161F;
+    --ink-soft: #565D72;
+    --ink-faint: #858BA0;
+    --accent: #4F6BFF;
+    --rule: #E3E6EF;
+    --good: #15803D;
+    --warn: #B45309;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0B0D12;
+      --surface: #12151C;
+      --panel: #171B24;
+      --ink: #E6E8EF;
+      --ink-soft: #9BA3B7;
+      --ink-faint: #6B7386;
+      --accent: #9FB0FF;
+      --rule: #262C39;
+      --good: #4ADE80;
+      --warn: #FBBF24;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0B0D12;
+    --surface: #12151C;
+    --panel: #171B24;
+    --ink: #E6E8EF;
+    --ink-soft: #9BA3B7;
+    --ink-faint: #6B7386;
+    --accent: #9FB0FF;
+    --rule: #262C39;
+    --good: #4ADE80;
+    --warn: #FBBF24;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Source Sans 3", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px 96px;
+  }
+
+  /* ── Masthead ─────────────────────────────────────────────────── */
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 56px 0 28px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 44px;
+  }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  h1 {
+    font-family: Newsreader, ui-serif, Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 2.7rem);
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .meta {
+    font-size: 14.5px;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── Sections ─────────────────────────────────────────────────── */
+  section { margin-bottom: 44px; }
+
+  h2 {
+    font-family: Newsreader, ui-serif, Georgia, serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 1.02rem;
+    margin: 28px 0 8px;
+    color: var(--ink);
+  }
+
+  p { margin: 0 0 15px; }
+  p:last-child { margin-bottom: 0; }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  code, .mono {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.86em;
+  }
+
+  code {
+    background: var(--panel);
+    padding: 0.12em 0.4em;
+    border-radius: 4px;
+    color: var(--ink-soft);
+  }
+
+  ul { margin: 0 0 15px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+
+  .lede {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  /* ── The two panels that carry the checkable detail ───────────── */
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 4px 22px;
+    margin: 22px 0;
+  }
+
+  .panel-wide {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    margin: 22px 0;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 560px;
+    font-size: 15px;
+  }
+
+  th {
+    text-align: left;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding: 14px 18px 10px;
+    border-bottom: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    color: var(--ink-soft);
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  td.perm {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+
+  .tag {
+    display: inline-block;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .tag-local {
+    color: var(--good);
+    background: color-mix(in srgb, var(--good) 12%, transparent);
+  }
+  .tag-sent {
+    color: var(--warn);
+    background: color-mix(in srgb, var(--warn) 14%, transparent);
+  }
+
+  /* Endpoint list — the specific hosts, stated plainly. */
+  .endpoints {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .endpoints li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    align-items: baseline;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--rule);
+    margin: 0;
+  }
+  .endpoints li:last-child { border-bottom: none; }
+  .endpoints .host {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 13px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .endpoints .why {
+    font-size: 15px;
+    color: var(--ink-soft);
+    flex: 1 1 260px;
+  }
+
+  .callout {
+    background: var(--panel);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 22px 0;
+    font-size: 15.5px;
+    color: var(--ink-soft);
+  }
+  .callout strong { color: var(--ink); font-weight: 600; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 14px;
+    color: var(--ink-faint);
+  }
+
+  .fill-me {
+    background: color-mix(in srgb, var(--warn) 16%, transparent);
+    color: var(--ink);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Device Info &amp; Tools</div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">Last updated 27 August 2026</div>
+  </header>
+
+  <section>
+    <p class="lede">Device Info &amp; Tools reads information about your phone and shows it to you. That information stays on your phone. There is no account, no server of ours, and nothing about your device is uploaded to us — because there is nowhere for it to be uploaded to.</p>
+    <p>This policy is specific rather than general: below you will find the exact permissions the app requests, what each one is for, and every internet address the app is capable of contacting.</p>
+  </section>
+
+  <section>
+    <h2>What stays on your device</h2>
+    <p>Everything the app reads about your hardware is processed locally and never transmitted: processor, memory, storage, battery, temperatures, display, cameras, sensors, network configuration, installed applications, and the results of every hardware test.</p>
+    <p>Reports you export as text or PDF are written to your device's own storage. They are shared only if you choose to share them, with whichever app you choose.</p>
+  </section>
+
+  <section>
+    <h2>Permissions, and why each one exists</h2>
+    <p>Android requires an app to declare each permission it uses. Here is every permission this app declares and the single feature it serves.</p>
+
+    <div class="panel-wide">
+      <table>
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Used for</th>
+            <th>Data leaves device</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="perm">INTERNET<br>ACCESS_NETWORK_STATE</td>
+            <td>Speed test, public IP lookup, connectivity checks, and advertising</td>
+            <td><span class="tag tag-sent">Yes — see below</span></td>
+          </tr>
+          <tr>
+            <td class="perm">ACCESS_WIFI_STATE<br>CHANGE_WIFI_STATE</td>
+            <td>Reading the current Wi‑Fi connection and scanning for nearby networks in the Wi‑Fi analyser</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">ACCESS_FINE_LOCATION<br>ACCESS_COARSE_LOCATION</td>
+            <td>Android will not return Wi‑Fi scan results to any app without location permission. The app uses this solely to list nearby networks — it never reads, stores, or transmits your location.</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">BLUETOOTH_CONNECT<br>BLUETOOTH_SCAN</td>
+            <td>Bluetooth adapter status, paired device list, and the Bluetooth hardware test</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">READ_MEDIA_IMAGES<br>READ_MEDIA_VIDEO<br>READ_MEDIA_AUDIO</td>
+            <td>Breaking down storage use by media type and listing your largest files. File contents are never opened or read.</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">ACTIVITY_RECOGNITION</td>
+            <td>Reading the step counter sensor value in the sensors list</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">RECORD_AUDIO</td>
+            <td>The microphone hardware test, which shows a live input level meter. No audio is recorded, saved, or transmitted.</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">VIBRATE</td>
+            <td>The vibration hardware test</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">READ_PHONE_STATE</td>
+            <td>Showing your mobile network generation (2G/3G/4G/5G), carrier name, and SIM status. Phone numbers and device identifiers are not read.</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">SYSTEM_ALERT_WINDOW<br>FOREGROUND_SERVICE<br>POST_NOTIFICATIONS</td>
+            <td>The optional floating monitor overlay, and the notification Android requires while it is running</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Every internet address the app can contact</h2>
+    <p>The app makes no background network requests. Each address below is contacted only when you open the feature that uses it.</p>
+
+    <div class="panel">
+      <ul class="endpoints">
+        <li>
+          <span class="host">speed.cloudflare.com</span>
+          <span class="why">Download and upload speed measurement, only when you tap <em>Run Speed Test</em></span>
+        </li>
+        <li>
+          <span class="host">api.ipify.org</span>
+          <span class="why">Returns your public IP address for the Network screen</span>
+        </li>
+        <li>
+          <span class="host">ipapi.co</span>
+          <span class="why">Returns your public IP with the approximate city and internet provider that address is registered to</span>
+        </li>
+        <li>
+          <span class="host">whois.iana.org</span>
+          <span class="why">WHOIS registry lookup, only for a domain name you type in yourself</span>
+        </li>
+        <li>
+          <span class="host">google.com</span>
+          <span class="why">A connection test used to measure round-trip latency</span>
+        </li>
+        <li>
+          <span class="host">any host you enter</span>
+          <span class="why">The DNS lookup, port scanner, and ping tools connect to whatever address you type into them</span>
+        </li>
+        <li>
+          <span class="host">Google advertising servers</span>
+          <span class="why">Delivering the banner advertisements described below</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <strong>On IP address lookups.</strong> Any service that tells you your public IP address necessarily sees that address, and <span class="mono">ipapi.co</span> also returns the approximate city and provider it is registered to. This is how the feature works, not something happening behind it. If you would rather not contact those services, avoid the Public IP card on the Network screen.
+    </div>
+  </section>
+
+  <section>
+    <h2>Advertising</h2>
+    <p>The app displays banner advertisements supplied by Google AdMob. To serve them, Google collects your device's advertising ID along with device and network information including your IP address. This is Google's collection, governed by their policies, not ours — we receive no personal information from it.</p>
+    <ul>
+      <li>Google's handling of this data is described in their <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Privacy &amp; Terms</a>.</li>
+      <li>You can reset or delete your advertising ID at any time in Android <strong>Settings → Privacy → Ads</strong>.</li>
+      <li>If you are in the European Economic Area or the United Kingdom, the app asks for your consent before serving personalised advertising, and you can change that choice at any time from <strong>More → Ad privacy options</strong> inside the app.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>This app is a technical utility and is not directed at children under 13. We do not knowingly collect information from children.</p>
+  </section>
+
+  <section>
+    <h2>Deleting your data</h2>
+    <p>There is no account to close and no data held on any server we operate. Uninstalling the app removes everything it stored, which is limited to your theme preference and your advertising consent choice. To clear the advertising ID Google holds, use the Android setting linked above.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the date at the top of this page will change with it, and the updated version will be published at this same address.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about this policy or about how the app handles data can be sent to <span class="fill-me">[add your contact email address here]</span>.</p>
+  </section>
+
+  <footer>
+    Device Info &amp; Tools · Published by <span class="fill-me">[add your developer name here]</span>
+  </footer>
+</div>
