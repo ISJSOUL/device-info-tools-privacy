@@ -283,12 +283,12 @@
   <header>
     <div class="eyebrow">Device Info &amp; Tools</div>
     <h1>Privacy Policy</h1>
-    <div class="meta">Last updated 11 September 2026</div>
+    <div class="meta">Last updated 2 September 2026</div>
   </header>
 
   <section>
     <p class="lede">Device Info &amp; Tools reads information about your phone and shows it to you. That information stays on your phone. There is no account, no server of ours, and nothing about your device is uploaded to us — because there is nowhere for it to be uploaded to.</p>
-    <p>This policy is specific rather than general: below you will find the exact permissions the app requests, what each one is for, and every internet address the app is capable of contacting.</p>
+    <p>This policy explains the permissions the app uses, what each one is for, and the external network services its features rely on.</p>
   </section>
 
   <section>
@@ -299,7 +299,7 @@
 
   <section>
     <h2>Permissions, and why each one exists</h2>
-    <p>Android requires an app to declare each permission it uses. Here is every permission this app declares and the single feature it serves.</p>
+    <p>Android requires an app and its libraries to declare permissions they use. The relevant user-facing and system permissions are explained here.</p>
 
     <div class="panel-wide">
       <table>
@@ -313,11 +313,11 @@
         <tbody>
           <tr>
             <td class="perm">INTERNET<br>ACCESS_NETWORK_STATE</td>
-            <td>Speed test, public IP lookup, connectivity checks, and advertising</td>
+            <td>Speed test, public IP lookup, connectivity checks, consent handling, and advertising</td>
             <td><span class="tag tag-sent">Yes — see below</span></td>
           </tr>
           <tr>
-            <td class="perm">ACCESS_WIFI_STATE<br>CHANGE_WIFI_STATE</td>
+            <td class="perm">ACCESS_WIFI_STATE<br>CHANGE_WIFI_STATE<br>NEARBY_WIFI_DEVICES</td>
             <td>Reading the current Wi‑Fi connection and scanning for nearby networks in the Wi‑Fi analyser</td>
             <td><span class="tag tag-local">No</span></td>
           </tr>
@@ -327,12 +327,12 @@
             <td><span class="tag tag-local">No</span></td>
           </tr>
           <tr>
-            <td class="perm">BLUETOOTH_CONNECT<br>BLUETOOTH_SCAN</td>
+            <td class="perm">BLUETOOTH_CONNECT<br>BLUETOOTH_SCAN<br>BLUETOOTH / BLUETOOTH_ADMIN (older Android versions)</td>
             <td>Bluetooth adapter status, paired device list, and the Bluetooth hardware test</td>
             <td><span class="tag tag-local">No</span></td>
           </tr>
           <tr>
-            <td class="perm">READ_MEDIA_IMAGES<br>READ_MEDIA_VIDEO<br>READ_MEDIA_AUDIO</td>
+            <td class="perm">READ_MEDIA_IMAGES<br>READ_MEDIA_VIDEO<br>READ_MEDIA_AUDIO<br>READ_EXTERNAL_STORAGE (older Android versions)</td>
             <td>Breaking down storage use by media type and listing your largest files. File contents are never opened or read.</td>
             <td><span class="tag tag-local">No</span></td>
           </tr>
@@ -357,9 +357,29 @@
             <td><span class="tag tag-local">No</span></td>
           </tr>
           <tr>
-            <td class="perm">SYSTEM_ALERT_WINDOW<br>FOREGROUND_SERVICE<br>POST_NOTIFICATIONS</td>
+            <td class="perm">USE_BIOMETRIC<br>USE_FINGERPRINT</td>
+            <td>Running the fingerprint hardware test through Android's system biometric prompt. The app never receives or stores fingerprint data.</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">KILL_BACKGROUND_PROCESSES</td>
+            <td>The user-triggered memory cleaner, which asks Android to stop eligible background app processes</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">SYSTEM_ALERT_WINDOW<br>FOREGROUND_SERVICE<br>FOREGROUND_SERVICE_SPECIAL_USE<br>POST_NOTIFICATIONS</td>
             <td>The optional floating monitor overlay, and the notification Android requires while it is running</td>
             <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">RECEIVE_BOOT_COMPLETED<br>WAKE_LOCK</td>
+            <td>Restoring placed widgets after a restart and letting Android run the scheduled local widget and device-tip maintenance reliably</td>
+            <td><span class="tag tag-local">No</span></td>
+          </tr>
+          <tr>
+            <td class="perm">BILLING</td>
+            <td>Optional support purchases handled by Google Play</td>
+            <td><span class="tag tag-sent">Yes — Google Play only</span></td>
           </tr>
         </tbody>
       </table>
@@ -367,8 +387,8 @@
   </section>
 
   <section>
-    <h2>Every internet address the app can contact</h2>
-    <p>The app makes no background network requests. Each address below is contacted only when you open the feature that uses it.</p>
+    <h2>Network services the app can contact</h2>
+    <p>The app does not upload device reports to any server we operate. Network requests are made for the user-requested tools listed below, to check optional support purchases through Google Play, and for Google consent and advertising services.</p>
 
     <div class="panel">
       <ul class="endpoints">
@@ -397,8 +417,12 @@
           <span class="why">The DNS lookup, port scanner, and ping tools connect to whatever address you type into them</span>
         </li>
         <li>
-          <span class="host">Unity Ads servers</span>
-          <span class="why">Delivering the advertisements described below</span>
+          <span class="host">Google Play services and the Play Store</span>
+          <span class="why">Checking the status and locally available prices of optional support purchases when the app starts or resumes</span>
+        </li>
+        <li>
+          <span class="host">Google advertising servers</span>
+          <span class="why">Consent handling and delivery of the separated banners and frequency-capped Terminal interstitial described below</span>
         </li>
       </ul>
     </div>
@@ -410,37 +434,14 @@
 
   <section>
     <h2>Advertising</h2>
-    <p>The app displays advertisements supplied by <strong>Unity Ads</strong>, a service of Unity Technologies. To serve them, Unity collects your device&rsquo;s advertising ID along with device and network information including your IP address. This is Unity&rsquo;s collection, governed by their policies, not ours &mdash; we receive no personal information from it.</p>
+    <p>The production app displays advertising supplied by Google AdMob. One compact, clearly separated banner placement may appear on each of these passive screens only: Dashboard, Device &amp; System, Device Health, and Sensors. Tool, test, permission, loading, error, text-entry, and hardware-control screens do not contain banners.</p>
+    <p>Each banner is retained when you leave and return to its screen, so page navigation does not generate another ad request. The app does not implement a banner refresh timer or retry loop; when automatic refresh is enabled, the Google Mobile Ads SDK refreshes only a visible banner according to the interval configured in AdMob.</p>
+    <p>The app may also show a frequency-capped interstitial only at the natural transition before opening Terminal, and only after repeated user actions. It is not shown at app launch, on exit, or on every navigation. Debug and Play closed-testing builds use Google's official test ad units instead of production inventory.</p>
+    <p>When advertising is enabled, Google may collect your device's advertising ID along with device and network information including your IP address. This is Google's collection, governed by their policies, not ours — we receive no personal information from it.</p>
     <ul>
-      <li>Unity&rsquo;s handling of this data is described in the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Player Privacy Policy</a>.</li>
-      <li>You can reset or delete your advertising ID at any time in Android <strong>Settings &rarr; Privacy &rarr; Ads</strong>. Deleting it stops the advertising ID being available to any app on the device.</li>
-      <li>If you are in the European Economic Area or the United Kingdom, the Unity Ads SDK presents its own consent prompt before any personalised advertising is served, and records your answer.</li>
-    </ul>
-
-    <h3>Where advertisements appear</h3>
-    <p>Two banner slots only &mdash; one on the Dashboard and one shared across the tools and information screens. There is no advertisement when the app opens, none when it closes, and none over a screen you are reading.</p>
-
-    <h3>The optional video advertisement</h3>
-    <p>Opening <strong>Terminal</strong> or <strong>Export report</strong> may offer you a short video to watch. It is entirely optional:</p>
-    <ul>
-      <li>Declining costs you nothing. Terminal opens and the export runs either way &mdash; no feature in this app is ever withheld behind an advertisement.</li>
-      <li>Watching one to the end removes <em>all</em> advertising for two hours. The app stores the moment that period ends, on your device only, so it survives closing the app.</li>
-      <li>While that period is running you will not be offered another video.</li>
-    </ul>
-
-    <h3>Removing advertising permanently</h3>
-    <p>Any donation removes all advertising for good. When that is active the advertising SDK is not started at all, so no advertising ID is collected for it &mdash; see <strong>Donations</strong> below.</p>
-  </section>
-
-  <section>
-    <h2>Donations and in-app purchases</h2>
-    <p>The app offers optional one-time donations. Every tier unlocks the same thing &mdash; permanently removing advertising &mdash; and nothing else in the app is ever locked behind payment. Donating is entirely optional and no feature depends on it.</p>
-    <ul>
-      <li><strong>Payments are handled by Google Play.</strong> They are processed entirely inside Google&rsquo;s billing system. We never see, receive or store your card number, billing address, or any other payment detail.</li>
-      <li><strong>What the app asks Google, and why.</strong> On launch the app asks Google Play whether this account already owns one of the donation products. It uses that single yes-or-no answer for one purpose: to switch advertising off. Nothing else is read from your Play account.</li>
-      <li><strong>What is stored on your device.</strong> The answer is cached locally so that a supporter never sees a banner flash while Google Play is being queried. It is a single true/false value, it never leaves your phone, and it is removed when the app is uninstalled.</li>
-      <li><strong>No profile is built.</strong> We do not know who donated, how much, or when. There is no server of ours for that information to reach.</li>
-      <li>Google&rsquo;s handling of a purchase is covered by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and the Google Play Terms of Service. Refunds are requested through Google Play, not through us.</li>
+      <li>Google's handling of this data is described in their <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Privacy &amp; Terms</a>.</li>
+      <li>You can reset or delete your advertising ID at any time in Android <strong>Settings → Privacy → Ads</strong>.</li>
+      <li>If you are in the European Economic Area or the United Kingdom, the app asks for your consent before requesting advertising, and you can change that choice at any time from <strong>More → Ad privacy options</strong> inside the app.</li>
     </ul>
   </section>
 
@@ -451,16 +452,7 @@
 
   <section>
     <h2>Deleting your data</h2>
-    <p>There is no account to close and no data held on any server we operate. Uninstalling the app removes everything it stored. That storage is limited to the following, all of it on your device only:</p>
-    <ul>
-      <li>your theme preference;</li>
-      <li>your advertising consent choice;</li>
-      <li>the time at which an advertisement-free period earned from a video ends, and the time an advertisement was last shown, both used only to keep advertising infrequent;</li>
-      <li>whether a donation has been made, as a single true/false value;</li>
-      <li>whether device tip notifications are switched on;</li>
-      <li>a short rolling history of memory, battery and temperature readings, kept solely to draw the trend graph on the home screen widget.</li>
-    </ul>
-    <p>To clear the advertising ID held against your device, use the Android setting linked above. Data already collected by Unity is subject to the Unity Player Privacy Policy linked in the Advertising section, which describes how to contact them about it.</p>
+    <p>There is no account to close and no data held on any server we operate. On the device, the app stores local settings and caches such as your theme, cached support-purchase entitlement, device-tip setting, recent widget history, temporary report files, advertising consent state, and ad frequency timestamps. Uninstalling clears the app's private storage; reports you deliberately saved or shared outside the app remain where you put them until you delete them. To clear an advertising ID held by Google, use the Android setting linked above.</p>
   </section>
 
   <section>
