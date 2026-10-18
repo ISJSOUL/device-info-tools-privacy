@@ -296,7 +296,9 @@
     <p>Everything the app reads about your hardware is processed locally and never transmitted: processor, memory, storage, battery, temperatures, display, cameras, sensors, network configuration, installed applications, and the results of every hardware test.</p>
     <p>Hardware test results are saved on your phone so you can see what has already been checked: the verdict, a short explanation, and the measurements behind it. They stay there until you run the test again or uninstall the app.</p>
     <p>Reports you export as text or PDF are written to your device's own storage. They are shared only if you choose to share them, with whichever app you choose.</p>
-    <p>The full checkup can produce a PDF inspection certificate, intended for showing to someone buying or selling a phone. It contains the phone's model and Android version, the date, and each check with its verdict. It deliberately leaves out the IMEI, serial number and anything else identifying the individual handset or its owner. It is created only when you ask for it, and shared only if you choose to share it.</p>
+    <p>The full checkup can produce a PDF inspection certificate, intended for showing to someone buying or selling a phone. It contains the phone's model and Android version, the date, and each check with its verdict. It deliberately leaves out the IMEI, serial number and the owner's details. It is created only when you ask for it, and shared only if you choose to share it.</p>
+    <p>The certificate's code repeats those results with a signature, so anyone scanning it with this app can see whether the PDF was edited. It also carries an eight-character code worked out one way from the identifier Android gives this app on this phone. That lets a buyer, scanning with the app on the phone itself, confirm the certificate was made on that phone. The code cannot be turned back into any identifier, no other app can produce it, and a factory reset changes it. Verifying a certificate happens entirely on the phone doing the scanning.</p>
+    <p>The storage capacity check, when you start it, fills the phone's free space with test data and reads it back, then deletes it - including after an interruption, the next time the app opens. The test data is meaningless filler and never leaves the phone.</p>
   </section>
 
   <section>
@@ -350,12 +352,12 @@
           </tr>
           <tr>
             <td class="perm">RECORD_AUDIO</td>
-            <td>The microphone test, which shows a live input level meter, and the speaker‑to‑microphone test, which plays tones and analyses what the microphone hears. Audio is examined in memory as it arrives; none of it is recorded, saved, or transmitted.</td>
+            <td>The microphone test, which shows a live input level meter; the speaker‑to‑microphone test, which plays tones and analyses what the microphone hears; and the sound meter, which shows how loud the surroundings are. Audio is examined in memory as it arrives; none of it is recorded, saved, or transmitted.</td>
             <td><span class="tag tag-local">No</span></td>
           </tr>
           <tr>
             <td class="perm">CAMERA</td>
-            <td>The rear and front camera tests, which judge focus, exposure and detail from the live preview, and the flashlight test. No photo or video is captured, saved, or transmitted.</td>
+            <td>The rear and front camera tests, which judge focus, exposure and detail from the live preview; the flashlight test; the distance and height tool, which uses the preview as a viewfinder; and certificate verification, which reads the code printed on an inspection certificate. No photo or video is captured, saved, or transmitted.</td>
             <td><span class="tag tag-local">No</span></td>
           </tr>
           <tr>
@@ -508,6 +510,8 @@
       <li>whether device tip notifications are switched on;</li>
       <li>whether you have finished the welcome tour, so it is not shown again;</li>
       <li>the results of hardware tests you have run, and how far through a checkup you are;</li>
+      <li>settings you give the measuring tools: the level's and ruler's calibration, the sound meter's adjustment, the height you hold the phone at for distance measuring, and a battery capacity you enter;</li>
+      <li>which steps you have ticked on the before-you-sell checklist;</li>
       <li>a short rolling history of memory, battery and temperature readings, kept solely to draw the trend graph on the home screen widget.</li>
     </ul>
     <p>To clear the advertising ID held against your device, use the Android setting linked above. Data already collected by Unity or Meta is subject to the privacy policies linked in the Advertising section, which describe how to contact them about it.</p>
