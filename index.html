@@ -283,7 +283,7 @@
   <header>
     <div class="eyebrow">Device Info &amp; Tools</div>
     <h1>Privacy Policy</h1>
-    <div class="meta">Last updated 19 October 2026</div>
+    <div class="meta">Last updated 23 October 2026</div>
   </header>
 
   <section>
@@ -299,6 +299,8 @@
     <p>The full checkup can produce a PDF inspection certificate, intended for showing to someone buying or selling a phone. It contains the phone's model and Android version, the date, and each check with its verdict. It deliberately leaves out the IMEI, serial number and the owner's details. It is created only when you ask for it, and shared only if you choose to share it.</p>
     <p>The certificate's code repeats those results with a signature, so anyone scanning it with this app can see whether the PDF was edited. It also carries an eight-character code worked out one way from the identifier Android gives this app on this phone. That lets a buyer, scanning with the app on the phone itself, confirm the certificate was made on that phone. The code cannot be turned back into any identifier, no other app can produce it, and a factory reset changes it. Verifying a certificate happens entirely on the phone doing the scanning.</p>
     <p>The QR code scanner and generator work entirely on the phone. What a scanned code contains is shown to you and kept nowhere; a link in it opens only if you tap Open link, and a Wi-Fi password is copied only if you tap Copy password. Codes you create are drawn on the phone and leave it only if you share them.</p>
+    <p><strong>Wi-Fi Dead Zones.</strong> Measuring a room reads the strength, link speed and band of the Wi-Fi network you are connected to - not its name, and no location permission is used. <strong>Map my walk</strong> draws your route from the phone's motion sensors: it counts your steps and notes which way the phone faces, and plots them as distances from where you started. It is not a location - no GPS, no map coordinates - and the sensors are read only while you are mapping. Surveys and their maps stay on the phone; a coverage report leaves it only if you share it.</p>
+    <p><strong>Battery recording.</strong> Battery Detective and Charge Forecast learn from a record of your battery, which is off until you switch it on in either tool. While it is on, the app notes, every 15 minutes and whenever a charger is plugged in or out: the battery level, whether it is charging and the charger type and power, the battery temperature, current and voltage, whether the screen is on, and the mobile signal strength (a number in dBm - not the network, the cell or your location). The record is kept on the phone for two weeks, is never sent anywhere, and can be deleted at any time with <strong>Delete recorded history</strong> in Battery Detective. Switching recording off stops it.</p>
     <p>The storage capacity check, when you start it, fills the phone's free space with test data and reads it back, then deletes it - including after an interruption, the next time the app opens. The test data is meaningless filler and never leaves the phone.</p>
   </section>
 
@@ -393,7 +395,7 @@
           </tr>
           <tr>
             <td class="perm">BILLING</td>
-            <td>Optional support purchases, handled by Google Play</td>
+            <td>Optional Premium purchase, handled by Google Play</td>
             <td><span class="tag tag-sent">Yes &mdash; Google Play only</span></td>
           </tr>
           <tr>
@@ -408,7 +410,7 @@
 
   <section>
     <h2>Every internet address the app can contact</h2>
-    <p>The app does not upload device reports to any server we operate. The tools below contact their addresses only when you use them. Two things happen without you opening a tool: when the app starts or comes back to the front it checks your optional support purchases with Google Play, and, unless you have donated, it starts the advertising service described below.</p>
+    <p>The app does not upload device reports to any server we operate. The tools below contact their addresses only when you use them. Two things happen without you opening a tool: when the app starts or comes back to the front it checks your optional Premium purchase with Google Play, and, unless you have Premium, it starts the advertising service described below.</p>
 
     <div class="panel">
       <ul class="endpoints">
@@ -438,7 +440,7 @@
         </li>
         <li>
           <span class="host">Google Play services and the Play Store</span>
-          <span class="why">Checking your optional support purchases and their local prices when the app starts or comes back to the front</span>
+          <span class="why">Checking your optional Premium purchase and its local prices when the app starts or comes back to the front</span>
         </li>
         <li>
           <span class="host">Unity LevelPlay, Unity Ads and Meta Audience Network servers</span>
@@ -481,17 +483,17 @@
     </ul>
 
     <h3>Removing advertising permanently</h3>
-    <p>The <strong>Remove ads</strong> purchase (any amount) removes all advertising for good. When that is active the advertising SDK is not started at all, so no advertising ID is collected for it &mdash; see <strong>Donations</strong> below.</p>
+    <p>The <strong>Premium</strong> purchase (any amount) removes all advertising for good. When that is active the advertising SDK is not started at all, so no advertising ID is collected for it &mdash; see <strong>Premium and in-app purchases</strong> below.</p>
   </section>
 
   <section>
-    <h2>Donations and in-app purchases</h2>
-    <p>The app offers optional one-time donations. Every tier unlocks the same thing: advertising is removed permanently, and Terminal and Export report open without a video. Everything else &mdash; every information screen, tool and hardware test &mdash; is free to everyone, and donating is never required to use them.</p>
+    <h2>Premium and in-app purchases</h2>
+    <p>The app offers an optional one-time Premium purchase, at an amount you choose from several. Every amount unlocks the same thing, permanently: the Premium tools (Wi-Fi Dead Zones, Battery Detective and Charge Forecast), Terminal and Export report without a video, and no advertising. Every other information screen, tool and hardware test is free to everyone.</p>
     <ul>
       <li><strong>Payments are handled by Google Play.</strong> They are processed entirely inside Google&rsquo;s billing system. We never see, receive or store your card number, billing address, or any other payment detail.</li>
-      <li><strong>What the app asks Google, and why.</strong> On launch the app asks Google Play whether this account already owns one of the donation products. It uses that single yes-or-no answer for one purpose: to switch advertising off. Nothing else is read from your Play account.</li>
-      <li><strong>What is stored on your device.</strong> The answer is cached locally so that a supporter never sees a banner flash while Google Play is being queried. It is a single true/false value, it never leaves your phone, and it is removed when the app is uninstalled.</li>
-      <li><strong>No profile is built.</strong> We do not know who donated, how much, or when. There is no server of ours for that information to reach.</li>
+      <li><strong>What the app asks Google, and why.</strong> On launch the app asks Google Play whether this account already owns one of the Premium products. It uses that single yes-or-no answer for one purpose: to unlock Premium, which also switches advertising off. Nothing else is read from your Play account.</li>
+      <li><strong>What is stored on your device.</strong> The answer is cached locally so that someone who bought Premium never sees a banner flash or a locked tool while Google Play is being queried. It is a single true/false value, it never leaves your phone, and it is removed when the app is uninstalled.</li>
+      <li><strong>No profile is built.</strong> We do not know who bought Premium, at what amount, or when. There is no server of ours for that information to reach.</li>
       <li>Google&rsquo;s handling of a purchase is covered by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and the Google Play Terms of Service. Refunds are requested through Google Play, not through us.</li>
     </ul>
   </section>
@@ -507,12 +509,14 @@
     <ul>
       <li>your theme preference;</li>
       <li>the time at which an advertisement-free period earned from a video ends, and the time an advertisement was last shown, both used only to keep advertising infrequent;</li>
-      <li>whether a donation has been made, as a single true/false value;</li>
+      <li>whether Premium has been bought, as a single true/false value;</li>
       <li>whether device tip notifications are switched on;</li>
       <li>whether you have finished the welcome tour, so it is not shown again;</li>
       <li>the results of hardware tests you have run, and how far through a checkup you are;</li>
       <li>settings you give the measuring tools: the level's and ruler's calibration, the sound meter's adjustment, the height you hold the phone at for distance measuring, and a battery capacity you enter;</li>
       <li>which steps you have ticked on the before-you-sell checklist;</li>
+      <li>your Wi-Fi Dead Zones surveys (the last twelve): the room names you choose, the Wi-Fi strength, link speed and band measured in each, and, if you map a walk, the route drawn from it;</li>
+      <li>the battery record, only while you have it switched on, kept for two weeks, and the names you give your chargers - see <strong>Battery recording</strong> above;</li>
       <li>a short rolling history of memory, battery and temperature readings, kept solely to draw the trend graph on the home screen widget.</li>
     </ul>
     <p>To clear the advertising ID held against your device, use the Android setting linked above. Data already collected by Unity or Meta is subject to the privacy policies linked in the Advertising section, which describe how to contact them about it.</p>
